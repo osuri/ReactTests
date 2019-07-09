@@ -1,3 +1,19 @@
-Hi This Project contains samples of react tests.
-This is a new line.
-I am tryitng to map my changes to github.
+Hi please make a note of below commands.
+-----------------------------------------------------------------------
+To set proxy for npm the commands:
+'npm config set proxy http://username:password@proxyaddress:port/'
+'npm config set http-proxy http://username:password@proxyaddress:port/'
+'npm config set https-proxy http://username:password@proxyaddress:port/'
+-------------------------------------------------------------------------
+To unset proxy for npm the commands:
+'npm config set proxy null'
+'npm config set http-proxy null'
+'npm config set https-proxy null'
+-------------------------------------------------------------------------
+To set proxy for git 
+git config --global http.proxy http://username:password@proxyaddress:port/
+--------------------------------------------------------------------------
+To unset proxy for git
+git config --global --list
+git config --global --unset http.proxy
+--------------------------------------------------------------------------
