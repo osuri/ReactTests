@@ -64,3 +64,16 @@ test('clicking the decrement counter then decrease the counter value',()=>{
   const counterDisplay = findByTestAttr(wrapper,'counter-display');
   expect(counterDisplay.text()).toContain(counter - 1);
 })
+test('render validation message if counter is less than zero',()=>{
+  const error = true;
+  const wrapper = setup(null,{error});
+  const validationMsg = findByTestAttr(wrapper,'validation-error');
+  expect(validationMsg.length).toBe(1);
+})
+
+test('default no error message',()=>{
+  const counter = null;
+  const wrapper = setup(null,{counter});
+  const validationMsg = findByTestAttr(wrapper,'validation-error');
+  expect(validationMsg.length).toBe(0);
+})
